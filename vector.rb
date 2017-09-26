@@ -1,4 +1,5 @@
 class Vector
+	attr_accessor :x, :y
   def initialize(x, y)
     @x = x
     @y = y
@@ -10,5 +11,8 @@ class Vector
 
   def length
     Math.sqrt(@x**2 + @y**2)
+  end
+  def add(v)
+  	return "(#{@x += v.x},#{@y += v.y})"
   end
 end
